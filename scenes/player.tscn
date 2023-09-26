@@ -201,7 +201,7 @@ size = Vector2(15, 21)
 
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
-collision_mask = 5
+collision_mask = 13
 script = ExtResource("1_pvmp2")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -215,3 +215,4 @@ position = Vector2(0.5, -10.5)
 shape = SubResource("RectangleShape2D_6lx0u")
 
 [node name="Camera2D" type="Camera2D" parent="."]
+limit_bottom = 300

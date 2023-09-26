@@ -29,7 +29,16 @@ public partial class level : Node2D
 	// signal from DeathZone
 	private void OnDeathZoneEntered(Node2D body)
 	{
-		var player = (CharacterBody2D)body;
+		ResetPlayer((CharacterBody2D)body);
+	}
+
+	private void OnTrapTouchedPlayer(CharacterBody2D player)
+	{
+		ResetPlayer(player);
+	}
+
+	private void ResetPlayer(CharacterBody2D player)
+	{
 		player.Velocity = Vector2.Zero;
 		player.GlobalPosition = startPosition.GlobalPosition;
 	}

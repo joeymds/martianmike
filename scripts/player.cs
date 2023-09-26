@@ -57,4 +57,13 @@ public partial class player : CharacterBody2D
 		Velocity = velocity;
 		MoveAndSlide();
 	}
+
+	public void Jump(float force)
+	{
+		var velocity = new Vector2
+		{
+			Y = -force
+		};
+		Velocity = velocity;
+	}
 }
